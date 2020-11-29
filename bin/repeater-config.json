@@ -2,37 +2,23 @@
   "degrade": false,
   "exceptionThreshold": 1000,
   "httpEntrancePatterns": [
-    "^/regress/.*$"
+    "^/dev/.*$"
   ],
   "javaEntranceBehaviors": [
     {
-      "classPattern": "com.alibaba.repeater.console.service.impl.RegressServiceImpl",
+      "classPattern": "com.abchina.its.blockchain.tomcat.DevController",
       "includeSubClasses": false,
       "methodPatterns": [
-        "getRegress"
+        "dev"
       ]
     }
   ],
   "javaSubInvokeBehaviors": [
     {
-      "classPattern": "com.alibaba.repeater.console.service.impl.RegressServiceImpl",
+      "classPattern": "com.abchina.its.blockchain.tomcat.DevService",
       "includeSubClasses": false,
       "methodPatterns": [
-        "getRegressInner"
-      ]
-    },
-    {
-      "classPattern": "com.alibaba.repeater.console.service.impl.RegressServiceImpl",
-      "includeSubClasses": false,
-      "methodPatterns": [
-        "findPartner"
-      ]
-    },
-    {
-      "classPattern": "com.alibaba.repeater.console.service.impl.RegressServiceImpl",
-      "includeSubClasses": false,
-      "methodPatterns": [
-        "slogan"
+        "devService"
       ]
     }
   ],
